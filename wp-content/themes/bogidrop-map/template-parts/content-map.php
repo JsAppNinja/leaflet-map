@@ -113,7 +113,7 @@
                 <div class="form-checkboxes bef-select-as-checkboxes bef-required-filter-processed">
                   <div class="bef-checkboxes">
                     <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-391 highlight">
-                      <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-391" value="391" checked="checked">
+                      <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-391" value="391">
                       <label class="option" for="edit-field-select-airline-tid-391">American</label>
                     </div>
                     <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-392">
