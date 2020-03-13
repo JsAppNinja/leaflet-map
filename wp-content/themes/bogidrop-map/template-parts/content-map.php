@@ -46,7 +46,7 @@
     overflow-y: auto;
     overflow-x: hidden;
   }
-  .filter-option {
+  .views-exposed-widget {
     font-weight: 600;
     font-style: oblique;
   }
@@ -144,66 +144,68 @@
   <div class="container main-board">
     <div class="row map-group">
       <div class="map-filter">
-        <section class="filter-options">
-          <div class="head">
-            <p>Select from the options below</p>
-          </div>
-          <div class="filter-option">
-            <label class="collapsible">Airline Hubs</label>
-            <div class="views-widget content">
-              <div class="form-item form-type-select form-item-field-select-airline-tid">
-                <div class="form-checkboxes bef-select-as-checkboxes bef-required-filter-processed">
-                  <div class="bef-checkboxes">
-                    <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-391 highlight">
-                      <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-391" value="391">
-                      <label class="option" for="edit-field-select-airline-tid-391">American</label>
-                    </div>
-                    <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-392">
-                      <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-392" value="392">
-                      <label class="option" for="edit-field-select-airline-tid-392">Delta</label>
-                    </div>
-                    <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-393">
-                      <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-393" value="393">
-                      <label class="option" for="edit-field-select-airline-tid-393">FedEx</label>
-                    </div>
-                    <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-394">
-                      <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-394" value="394">
-                      <label class="option" for="edit-field-select-airline-tid-394">Southwest</label>
-                    </div>
-                    <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-395">
-                      <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-395" value="395">
-                      <label class="option" for="edit-field-select-airline-tid-395">United</label>
-                    </div>
-                    <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-396">
-                      <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-396" value="396">
-                      <label class="option" for="edit-field-select-airline-tid-396">UPS</label>
+        <form action="/map-page/squadron-map" method="get" id="views-exposed-form-squadron-map-v2-page-1" accept-charset="UTF-8">
+          <div class="filter-options views-exposed-form">
+            <div class="head">
+              <p>Select from the options below</p>
+            </div>
+            <div id="edit-field-select-airline-tid-wrapper" class="views-exposed-widget views-widget-filter-field_select_airline_tid">
+              <label class="collapsible">Airline Hubs</label>
+              <div class="views-widget content">
+                <div class="form-item form-type-select form-item-field-select-airline-tid">
+                  <div class="form-checkboxes bef-select-as-checkboxes bef-required-filter-processed">
+                    <div class="bef-checkboxes">
+                      <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-391 highlight">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-391" value="391">
+                        <label class="option" for="edit-field-select-airline-tid-391">American</label>
+                      </div>
+                      <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-392">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-392" value="392">
+                        <label class="option" for="edit-field-select-airline-tid-392">Delta</label>
+                      </div>
+                      <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-393">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-393" value="393">
+                        <label class="option" for="edit-field-select-airline-tid-393">FedEx</label>
+                      </div>
+                      <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-394">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-394" value="394">
+                        <label class="option" for="edit-field-select-airline-tid-394">Southwest</label>
+                      </div>
+                      <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-395">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-395" value="395">
+                        <label class="option" for="edit-field-select-airline-tid-395">United</label>
+                      </div>
+                      <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-396">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-396" value="396">
+                        <label class="option" for="edit-field-select-airline-tid-396">UPS</label>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="filter-option">
-            <label class="collapsible">Fighters/Bombers</label>
-            <div class="content">
-              <p>Test Content</p>
+            <div class="views-exposed-widget">
+              <label class="collapsible">Fighters/Bombers</label>
+              <div class="content">
+                <p>Test Content</p>
+              </div>
             </div>
-          </div>
-          <div class="filter-option">
-            <label class="collapsible">Cargo/Tankers</label>
-            <div class="content">
-              <p>Test Content</p>
+            <div class="views-exposed-widget">
+              <label class="collapsible">Cargo/Tankers</label>
+              <div class="content">
+                <p>Test Content</p>
+              </div>
             </div>
-          </div>
-          <div class="filter-option">
-            <label class="collapsible">Others</label>
-            <div class="content">
-              <p>Test Content</p>
+            <div class="views-exposed-widget">
+              <label class="collapsible">Others</label>
+              <div class="content">
+                <p>Test Content</p>
+              </div>
             </div>
+            <section class="views-exposed-widget filter-apply">
+            </section>
           </div>
-        </section>
-        <section class="filter-apply">
-        </section>
+        </form>
       </div>
       <div class="map-show">
         <?php
