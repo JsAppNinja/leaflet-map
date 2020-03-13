@@ -90,6 +90,40 @@
     font-weight: bold;
     font-size: 23px;
   }
+  .form-item-field-select-airline-tid label:before {
+    position: absolute;
+    background-position: left center;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    width: 8px;
+    height: 20px;
+    top: 0;
+    right: 0px;
+    background-size: contain;
+  }
+  label {
+    position: relative;
+    width: 90%;
+  }
+  .form-item-edit-field-select-airline-tid-391 label:before {
+    background-image: url('../wp-content/plugins/leaflet-map/markers/small/bred.png');
+  }
+  .form-item-edit-field-select-airline-tid-392 label:before {
+    background-image: url('../wp-content/plugins/leaflet-map/markers/small/dblue.png');
+  }
+  .form-item-edit-field-select-airline-tid-393 label:before {
+    background-image: url('../wp-content/plugins/leaflet-map/markers/small/purple.png');
+  }
+  .form-item-edit-field-select-airline-tid-394 label:before {
+    background-image: url('../wp-content/plugins/leaflet-map/markers/small/orange.png');
+  }
+  .form-item-edit-field-select-airline-tid-395 label:before {
+    background-image: url('../wp-content/plugins/leaflet-map/markers/small/lblue.png');
+  }
+  .form-item-edit-field-select-airline-tid-396 label:before {
+    background-image: url('../wp-content/plugins/leaflet-map/markers/small/brown.png');
+  }
 </style>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
