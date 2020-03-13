@@ -71,10 +71,12 @@
     content: "\2796"; /* Unicode character for "minus" sign (-) */
   }
   .content {
+    margin-bottom: 5px;
+    margin-top: -5px;
+    border: 1px solid #0099e6;
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
   }
   .head p {
     border-bottom: 3px solid yellowgreen;
