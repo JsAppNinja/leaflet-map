@@ -200,7 +200,7 @@
       <div class="map-show">
         <?php
           $drag = __('Marker1', 'leaflet-map');
-          echo do_shortcode('[leaflet-map zoom=7 zoomcontrol doubleClickZoom height=500 scrollwheel]');
+          echo do_shortcode('[leaflet-map zoom=12 zoomcontrol doubleClickZoom height=500 scrollwheel]');
           echo do_shortcode(sprintf('[leaflet-marker draggable visible] %s [/leaflet-marker]',
             $drag
           ));
