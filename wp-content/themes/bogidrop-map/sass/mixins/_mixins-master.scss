@@ -1,0 +1,97 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1.6rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// @include link-colors($primary_color,$secondary_color);
+@mixin link-colors($normal, $hover) {
+  color: $normal;
+  &:visited {
+      color: $normal;
+    }
+  &:hover,
+  &:focus {
+      color: $hover;
+    }
+}
+
+//  @include opacity(0.8);
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// @include box-shadow(0,0, 2px, rgba(0, 0, 0, 0.25), $inset: false)
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// @include border-radius(4px)
+@mixin border-radius($radius) {
+	-webkit-border-radius:  $radius;
+		-moz-border-radius: $radius;
+			border-radius:  $radius;
+}
+
+@mixin custom-break($size) {
+    @media ($size) { @content; }
+}
+
+@mixin break($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (max-width: 768px) { @content; }
+  }
+ 
+  @else if $class == md {
+    @media (max-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}
+
+%clear {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

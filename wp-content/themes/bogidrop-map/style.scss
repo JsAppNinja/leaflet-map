@@ -1,0 +1,129 @@
+/*!
+Theme Name: Bogidope
+Theme URI: https://iograficathemes.com/wordpress-themes/bogidope/
+Author: iografica
+Author URI: https://www.iograficathemes.com/
+Description: Bogidope is a beautiful responsive, elegant and clean coded WordPress theme that can be used for pesonal, business or ecommerce websites. Bogidope is e-commerce, multilingual ready, SEO friendly and cross-browser compatible. The theme is fully integrated with the most popular and free Wordpress plugins like WooCommerce, Easy Digital Downloads, Yoast Seo, Beaver Builder, Elementor and much more. You can customize Bogidope via the Customizer and use this theme as an ecommerce or as a simple blogging platform.
+Version: 2.16
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bogidope
+Domain Path: /languages/
+Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu, featured-image-header, featured-images, footer-widgets, full-width-template, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Bogidope is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+    ## Links
+    ## Menus
+# Accessibility
+# Alignments
+# Clearings`
+# Widgets
+# Content
+    ## Posts and pages
+    ## Comments
+# Infinite scroll
+# Media
+    ## Captions
+    ## Galleries
+--------------------------------------------------------------*/
+@import 'bourbon/bourbon';
+
+@import 'sass/variables-site/variables-site';
+@import 'sass/mixins/mixins-master';
+@import 'sass/vendor/boostrap';
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import 'sass/normalize';
+/*--------------------------------------------------------------
+# Grid
+--------------------------------------------------------------*/
+@import 'sass/grid/index';
+@import 'sass/layout/layout';
+
+
+
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import 'sass/typography/typography';
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import 'sass/elements/elements';
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import 'sass/forms/forms';
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import 'sass/navigation/navigation';
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import 'sass/modules/accessibility';
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import 'sass/modules/alignments';
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import 'sass/modules/clearings';
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import 'sass/site/secondary/widgets';
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import 'sass/site/site';
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import 'sass/modules/infinite-scroll';
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import 'sass/media/media';
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+@import 'sass/plugins/plugins';
+
+/*--------------------------------------------------------------
+# Posts
+--------------------------------------------------------------*/
+@import 'sass/posts/posts';
+
+@import 'sass/layout/homepage';

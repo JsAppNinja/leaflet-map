@@ -1,0 +1,28 @@
+.JobPost {
+    &__Item {
+        font-size: 1.4rem;
+        &__Label {
+            font-weight: bold;
+        }
+    }
+    &__Sidebar {
+         float: right;
+         margin: 0 0 30px 30px;
+         padding: 30px;
+         border: 2px solid lightgray;
+
+         @include break(xs) {
+             width: 100%;
+             .JobPost {
+                 &__Item {
+                    float: left;
+                    margin: 0 20px 20px 0;
+                    &__Label {
+                        float: left;
+                        padding-right: 8px;
+                    }
+                }
+             }
+         }
+    }
+}

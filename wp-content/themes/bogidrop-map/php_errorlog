@@ -1,0 +1,104 @@
+[11-Feb-2020 04:54:51 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[12-Feb-2020 04:40:05 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[13-Feb-2020 04:23:23 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[14-Feb-2020 04:19:40 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[15-Feb-2020 04:18:17 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[16-Feb-2020 04:13:19 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[17-Feb-2020 04:16:34 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[18-Feb-2020 04:20:16 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[19-Feb-2020 04:33:03 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[20-Feb-2020 04:21:34 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[21-Feb-2020 04:17:11 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[22-Feb-2020 04:09:32 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[23-Feb-2020 04:05:06 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[24-Feb-2020 04:17:31 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[25-Feb-2020 04:25:45 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[26-Feb-2020 04:30:54 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[27-Feb-2020 04:29:42 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[28-Feb-2020 04:26:33 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[29-Feb-2020 04:22:32 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[01-Mar-2020 04:23:17 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[02-Mar-2020 04:14:33 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[03-Mar-2020 04:32:30 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[03-Mar-2020 09:06:17 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[04-Mar-2020 04:43:55 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[05-Mar-2020 04:51:10 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
+[06-Mar-2020 04:50:14 CST6CDT] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/bogidope/public_html/wp-content/themes/bogidope/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home/bogidope/public_html/wp-content/themes/bogidope/index.php on line 16
