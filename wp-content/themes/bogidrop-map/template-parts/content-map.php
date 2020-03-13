@@ -4,9 +4,17 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Bogidope
+ * @package Bogidope Map
  */
-
+?>
+<?php
+  $args = array(
+    'numberposts'		=> -1,
+    'post_type'		=> 'unit',
+    'orderby' 		=> 'title',
+    'order' 		=> 'ASC',
+  );
+  $myposts = get_posts($args);
 ?>
 <style>
   .map-group {
