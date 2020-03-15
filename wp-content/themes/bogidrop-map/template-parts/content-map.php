@@ -39,6 +39,7 @@
     position: relative;
     width: 100%;
     min-height: 200px;
+    border: 4px black double;
   }
   .filter-options {
     margin: 2rem;
@@ -132,6 +133,10 @@
   .form-item-edit-field-select-airline-tid-396 label:before {
     background-image: url('../wp-content/plugins/leaflet-map/markers/small/brown.png');
   }
+
+  #edit-field-branch-catagory-tid-156 {
+    display: none;
+  }
 </style>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
@@ -149,11 +154,11 @@
             <div class="head">
               <p>Select from the options below</p>
             </div>
-            <div id="edit-field-select-airline-tid-wrapper" class="views-exposed-widget views-widget-filter-field_select_airline_tid">
+            <div id="airline-tid-wrapper" class="views-exposed-widget select_airline_tid">
               <label class="collapsible">Airline Hubs</label>
               <div class="views-widget content">
                 <div class="form-item form-type-select form-item-field-select-airline-tid">
-                  <div class="form-checkboxes bef-select-as-checkboxes bef-required-filter-processed">
+                  <div class="form-checkboxes bef-select-as-checkboxes">
                     <div class="bef-checkboxes">
                       <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-391 highlight">
                         <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-391" value="391">
@@ -184,22 +189,31 @@
                 </div>
               </div>
             </div>
-            <div class="views-exposed-widget">
-              <label class="collapsible">Fighters/Bombers</label>
-              <div class="content">
-                <p>Test Content</p>
-              </div>
-            </div>
-            <div class="views-exposed-widget">
-              <label class="collapsible">Cargo/Tankers</label>
-              <div class="content">
-                <p>Test Content</p>
-              </div>
-            </div>
-            <div class="views-exposed-widget">
-              <label class="collapsible">Others</label>
-              <div class="content">
-                <p>Test Content</p>
+            <div id="branch_category-tid-wrapper" class="views-exposed-widget branch_category_tid">
+              <label style="display: none;">Category</label>
+              <div class="views-widget">
+                <div class="form-item form-type-select form-item-field-branch-catagory-tid">
+                  <div class="form-checkboxes">
+                    <section class="views-exposed-widget">
+                      <label class="collapsible">Fighters/Bombers</label>
+                      <ul class="bef-tree-child bef-tree-depth-1 content">
+                        <p>Test Content</p>
+                      </ul>
+                    </section>
+                    <section class="views-exposed-widget">
+                      <label class="collapsible">Cargo/Tankers</label>
+                      <div class="content">
+                        <p>Test Content</p>
+                      </div>
+                    </section>
+                    <section class="views-exposed-widget">
+                      <label class="collapsible">Others</label>
+                      <div class="content">
+                        <p>Test Content</p>
+                      </div>
+                    </section>
+                  </div>
+                </div>
               </div>
             </div>
             <section class="views-exposed-widget filter-apply">
@@ -210,7 +224,7 @@
       <div class="map-show">
         <?php
           $drag = __('Marker1', 'leaflet-map');
-          echo do_shortcode('[leaflet-map zoom=12 zoomcontrol doubleClickZoom height=500 scrollwheel]');
+          echo do_shortcode('[leaflet-map zoom=12 zoomcontrol doubleClickZoom height=600 scrollwheel]');
           echo do_shortcode(sprintf('[leaflet-marker draggable visible] %s [/leaflet-marker]',
             $drag
           ));
