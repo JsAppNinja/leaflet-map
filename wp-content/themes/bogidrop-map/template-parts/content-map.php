@@ -196,7 +196,7 @@
     border-color: #0088cc #0088cc #006699;
     background-color: #0088cc !important;
   }
-  .site-main .full-width {
+  .site-main.full-width {
     max-width: 1600px;
   }
 </style>
