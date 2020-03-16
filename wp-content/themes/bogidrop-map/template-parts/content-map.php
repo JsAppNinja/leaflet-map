@@ -203,11 +203,14 @@
     } else {
       do_action( 'igthemes_loop' );
     }
+    global $wp;
+    $current_url = home_url( add_query_arg( array(), $wp->request ) );
+    print_r($_POST);
   ?>
   <div class="container main-board">
     <div class="row map-group">
       <div class="map-filter">
-        <form action="/map-page/squadron-map" method="get" id="views-exposed-form-squadron-map-v2-page-1" accept-charset="UTF-8">
+        <form action="<?php echo $current_url ?>" method="post" id="views-exposed-form-squadron-map-v2-page-1" accept-charset="UTF-8">
           <div class="filter-options views-exposed-form">
             <div class="head">
               <p>Select from the options below</p>
