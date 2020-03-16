@@ -11,6 +11,12 @@
   $args = array(
     'numberposts'		=> -1,
     'post_type'		=> 'unit',
+    // 'tax_query' => array(
+    //   array(
+    //   'taxonomy' => 'gallery_cat',
+    //   'field' => 'slug',
+    //   'terms' => array('Sunsets', 'Nature'))
+    // ),
     'orderby' 		=> 'title',
     'order' 		=> 'ASC',
   );
@@ -211,7 +217,7 @@
     $current_url = home_url( add_query_arg( array(), $wp->request ) );
     print_r($_POST);
   ?>
-  <div class="container main-board">
+  <div class="container main-board" style="max-width: 1600px;">
     <div class="row map-group">
       <div class="map-filter">
         <form action="<?php echo $current_url ?>" method="post" id="views-exposed-form-squadron-map-v2-page-1" accept-charset="UTF-8">
