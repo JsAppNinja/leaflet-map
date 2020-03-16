@@ -196,6 +196,9 @@
     border-color: #0088cc #0088cc #006699;
     background-color: #0088cc !important;
   }
+  .site-main .full-width {
+    max-width: 1600px;
+  }
 </style>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
