@@ -15,6 +15,7 @@
     'order' 		=> 'ASC',
   );
   $myposts = get_posts($args);
+  // var_dump($myposts);
 ?>
 <style>
   .map-group {
