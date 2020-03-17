@@ -528,6 +528,30 @@
       </div>
       <div class="map-show">
         <?php
+        $args = array(
+          'numberposts'		=> -1,
+          'post_type'		=> 'unit',
+          'fields' => 'ID,address_fields',
+          'tax_query' => array(
+            array(
+            'taxonomy' => 'branch_category',
+            'field' => 'slug',
+            'terms' => array('c-32'))
+          ),
+          'orderby' 		=> 'title',
+          'order' 		=> 'ASC',
+          );
+          $myposts = get_posts($args);
+          $post_meta = get_post_meta(587, "wpcf-data");
+        //   echo gettype($post_meta)."\n";
+          $codes = explode(";", $post_meta[0]);
+          print_r($codes);
+          $loc1 = strpos($codes[5], '"');
+          $final = substr($codes[5], $loc1+1);
+          echo (double)$final;
+        //   $result = preg_replace("/s/g", '<span style="background:yellow">Guru</span>', $text);
+        //   print_r($post_meta);
+            
           $drag = __('Marker1', 'leaflet-map');
           echo do_shortcode('[leaflet-map zoom=12 zoomcontrol doubleClickZoom height=600 scrollwheel]');
           echo do_shortcode(sprintf('[leaflet-marker draggable visible] %s [/leaflet-marker]',
