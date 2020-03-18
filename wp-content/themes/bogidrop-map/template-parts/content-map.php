@@ -7,22 +7,6 @@
  * @package Bogidope Map
  */
 ?>
-<?php
-  $args = array(
-    'numberposts'		=> -1,
-    'post_type'		=> 'unit',
-    // 'tax_query' => array(
-    //   array(
-    //   'taxonomy' => 'gallery_cat',
-    //   'field' => 'slug',
-    //   'terms' => array('Sunsets', 'Nature'))
-    // ),
-    'orderby' 		=> 'title',
-    'order' 		=> 'ASC',
-  );
-  $myposts = get_posts($args);
-  // var_dump($myposts);
-?>
 <style>
   .map-group {
     flex: 0 0 100%;
@@ -204,6 +188,7 @@
   }
   .site-main.full-width {
     max-width: 1600px;
+	margin: auto;
   }
 </style>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -215,12 +200,11 @@
     }
     global $wp;
     $current_url = home_url( add_query_arg( array(), $wp->request ) );
-    print_r($_POST);
   ?>
   <div class="container main-board" style="max-width: 1600px;">
     <div class="row map-group">
       <div class="map-filter">
-        <form action="<?php echo $current_url ?>" method="post" id="views-exposed-form-squadron-map-v2-page-1" accept-charset="UTF-8">
+        <form action="<?php echo $current_url ?>" method="post" id="views-squadron-map" accept-charset="UTF-8">
           <div class="filter-options views-exposed-form">
             <div class="head">
               <p>Select from the options below</p>
@@ -232,27 +216,27 @@
                   <div class="form-checkboxes bef-select-as-checkboxes">
                     <div class="bef-checkboxes">
                       <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-391 highlight">
-                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-391" value="391">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-391" value="american">
                         <label class="option" for="edit-field-select-airline-tid-391">American</label>
                       </div>
                       <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-392">
-                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-392" value="392">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-392" value="delta">
                         <label class="option" for="edit-field-select-airline-tid-392">Delta</label>
                       </div>
                       <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-393">
-                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-393" value="393">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-393" value="fedex">
                         <label class="option" for="edit-field-select-airline-tid-393">FedEx</label>
                       </div>
                       <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-394">
-                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-394" value="394">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-394" value="southwest">
                         <label class="option" for="edit-field-select-airline-tid-394">Southwest</label>
                       </div>
                       <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-395">
-                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-395" value="395">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-395" value="united">
                         <label class="option" for="edit-field-select-airline-tid-395">United</label>
                       </div>
                       <div class="form-item form-type-bef-checkbox form-item-edit-field-select-airline-tid-396">
-                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-396" value="396">
+                        <input type="checkbox" name="field_select_airline_tid[]" id="edit-field-select-airline-tid-396" value="ups">
                         <label class="option" for="edit-field-select-airline-tid-396">UPS</label>
                       </div>
                     </div>
@@ -277,31 +261,31 @@
                             </div>
                             <ul class="bef-tree-child bef-tree-depth-2">
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-158" value="158" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-158" value="a-10" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-158">A-10</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-159" value="159" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-159" value="b-1" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-159">B-1</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-160" value="160" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-160" value="b-52" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-160">B-52</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-161" value="161" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-161" value="f-15c" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-161">F-15C</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-162" value="162" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-162" value="f-15e" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-162">F-15E</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-163" value="163" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-163" value="f-16" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-163">F-16</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-164" value="164" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-164" value="f-22" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-164">F-22</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-165" value="165" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-165" value="f-35" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-165">F-35</label>
                               </li>
                             </ul>
@@ -313,26 +297,26 @@
                             </div>
                             <ul class="bef-tree-child bef-tree-depth-2">
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-158" value="158" class="form-checkboxes">
-                                <label class="option" for="edit-field-branch-catagory-tid-158">F-35</label>
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-166" value="f-35-air-national-guard-fighters-bombers" class="form-checkboxes">
+                                <label class="option" for="edit-field-branch-catagory-tid-166">F-35</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-159" value="159" class="form-checkboxes">
-                                <label class="option" for="edit-field-branch-catagory-tid-159">B-2</label>
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-167" value="b-2" class="form-checkboxes">
+                                <label class="option" for="edit-field-branch-catagory-tid-167">B-2</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-160" value="160" class="form-checkboxes">
-                                <label class="option" for="edit-field-branch-catagory-tid-160">A-10</label>
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-168" value="a-10-air-national-guard-fighters-bombers" class="form-checkboxes">
+                                <label class="option" for="edit-field-branch-catagory-tid-168">A-10</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-161" value="161" class="form-checkboxes">
-                                <label class="option" for="edit-field-branch-catagory-tid-161">F-15C</label>
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-169" value="f-15c-air-national-guard-fighters-bombers" class="form-checkboxes">
+                                <label class="option" for="edit-field-branch-catagory-tid-169">F-15C</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-163" value="163" class="form-checkboxes">
-                                <label class="option" for="edit-field-branch-catagory-tid-163">F-16</label>
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-170" value="f-16-air-national-guard-fighters-bombers" class="form-checkboxes">
+                                <label class="option" for="edit-field-branch-catagory-tid-170">F-16</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-164" value="164" class="form-checkboxes">
-                                <label class="option" for="edit-field-branch-catagory-tid-164">F-22</label>
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-171" value="f-22-air-national-guard-fighters-bombers" class="form-checkboxes">
+                                <label class="option" for="edit-field-branch-catagory-tid-171">F-22</label>
                               </li>
                             </ul>
                           </li>
@@ -350,20 +334,20 @@
                             </div>
                             <ul class="bef-tree-child bef-tree-depth-2">
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-152" value="152" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-152" value="c-130-air-national-guard" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-152">C-130</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-153" value="153" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-153" value="c-17-air-national-guard" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-153">C-17</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-154" value="154" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-154" value="kc-135-air-national-guard" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-154">KC-135</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-155" value="155" class="form-checkboxes">
-                                <label class="option" for="edit-field-branch-catagory-tid-155">KC-36</label>
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-155" value="kc-46-air-national-guard" class="form-checkboxes">
+                                <label class="option" for="edit-field-branch-catagory-tid-155">KC-46</label>
                               </li>
                             </ul>
                           </li>
@@ -374,25 +358,25 @@
                             </div>
                             <ul class="bef-tree-child bef-tree-depth-2">
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-145" value="145" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-145" value="kc-46" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-145">KC-46</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-146" value="146" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-146" value="kc-135" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-146">KC-135</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-147" value="147" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-147" value="c-130" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-147">C-130</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-148" value="148" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-148" value="c-17" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-148">C-17</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-149" value="149" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-149" value="c-5" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-149">C-5</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-150" value="150" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-150" value="kc-10" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-150">KC-10</label>
                               </li>
                             </ul>
@@ -411,47 +395,47 @@
                             </div>
                             <ul class="bef-tree-child bef-tree-depth-2">
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-190" value="190" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-190" value="c-32" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-190">C-32</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-191" value="191" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-191" value="c-40-air-national-guard-other" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-191">C-40</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-192" value="192" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-192" value="c-21" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-192">C-21</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-193" value="193" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-193" value="mc-12" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-193">MC-12</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-194" value="194" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-194" value="hh-60-air-national-guard-other" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-194">HH-60</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-195" value="195" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-195" value="mq-1-air-national-guard-other" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-195">MQ-1</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-196" value="196" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-196" value="mq-9-air-national-guard-other" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-196">MQ-9</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-197" value="197" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-197" value="t-38-air-national-guard-other" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-197">T-38</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-198" value="198" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-198" value="rc-26" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-198">RC-26</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-199" value="199" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-199" value="e-8" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-199">E-8</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-200" value="200" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-200" value="cv-22" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-200">CV-22</label>
                               </li>
                             </ul>
@@ -463,52 +447,52 @@
                             </div>
                             <ul class="bef-tree-child bef-tree-depth-2">
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-174" value="174" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-174" value="uv-18" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-174">UV-18</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-175" value="175" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-175" value="u-28" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-175">U-28</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-176" value="176" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-176" value="tg-15-16" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-176">TG-15/16</label>
                               </li>
                               <li>
-                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-177" value="177" class="form-checkboxes">
+                                <input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-177" value="t-1" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-177">T-1</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-178" value="178" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-178" value="rq-4" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-178">RQ-4</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-179" value="179" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-179" value="t-38" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-179">T-38</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-179" value="179" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-179" value="t-41" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-179">T-41</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-180" value="180" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-180" value="t-51-52-53" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-180">T-51/52/53</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-181" value="181" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-181" value="t-6" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-181">T-6</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-182" value="182" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-182" value="mq-9" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-182">MQ-9</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-183" value="183" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-183" value="c-145" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-183">C-145</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-184" value="184" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-184" value="c-40" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-184">C-40</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-185" value="185" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-185" value="e-3" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-185">E-3</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-186" value="186" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-186" value="hh-60" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-186">HH-60</label>
                               </li>
-                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-187" value="187" class="form-checkboxes">
+                              <li><input type="checkbox" name="field_branch_catagory_tid[]" id="edit-field-branch-catagory-tid-187" value="mq-1" class="form-checkboxes">
                                 <label class="option" for="edit-field-branch-catagory-tid-187">MQ-1</label>
                               </li>
                             </ul>
@@ -528,31 +512,67 @@
       </div>
       <div class="map-show">
         <?php
-        $args = array(
-          'numberposts'		=> -1,
-          'post_type'		=> 'unit',
-          'fields' => 'ID,address_fields',
-          'tax_query' => array(
-            array(
-            'taxonomy' => 'branch_category',
-            'field' => 'slug',
-            'terms' => array('c-32'))
-          ),
-          'orderby' 		=> 'title',
-          'order' 		=> 'ASC',
+		  $airlines = array();
+		  $branches = array();
+		  foreach( $_POST as $key => $categories) {
+			  if ($key == "field_select_airline_tid") {
+				  foreach($categories as $key1 => $term1) {
+					  array_push($airlines, $term1);
+				  }
+			  }
+			  if ($key == "field_branch_catagory_tid") {
+				  foreach($categories as $key2 => $term2) {
+					  array_push($branches, $term2);
+				  }
+			  } 
+		  }
+		  $args1 = array(
+			  'numberposts'	=> -1,
+			  'post_type'	=> 'unit',
+			  'tax_query' => array(
+				array(
+				'taxonomy' => 'airline',
+				'field' => 'slug',
+				'terms' => $airlines)
+			  ),
+			  'orderby' => 'title',
+			  'order' 	=> 'ASC',
           );
-          $myposts = get_posts($args);
-          $post_meta = get_post_meta(587, "wpcf-data");
-        //   echo gettype($post_meta)."\n";
-          $codes = explode(";", $post_meta[0]);
-          print_r($codes);
-          $loc1 = strpos($codes[5], '"');
-          $final = substr($codes[5], $loc1+1);
-          echo (double)$final;
-        //   $result = preg_replace("/s/g", '<span style="background:yellow">Guru</span>', $text);
-        //   print_r($post_meta);
-            
-          $drag = __('Marker1', 'leaflet-map');
+		  $args2 = array(
+			  'numberposts'	=> -1,
+			  'post_type'	=> 'unit',
+			  'tax_query' => array(
+				array(
+				'taxonomy' => 'branch_category',
+				'field' => 'slug',
+				'terms' => $branches)
+			  ),
+			  'orderby' => 'title',
+			  'order' 	=> 'ASC',
+          );
+		  $markers = array();
+		  $markers1 = get_posts($args1); 
+		  if(!empty($markers1)) $markers = array_merge($markers, $markers1);
+		  $markers2 = get_posts($args2);
+		  if(!empty($markers2)) $markers = array_merge($markers, $markers2);
+		  $variants = array();
+		  for ($i = 0; $i < count($markers); $i++) {
+			  $marker = $markers[$i];
+			  $post_meta = get_post_meta($marker->ID, "wpcf-data");
+			  $codes = explode(";", $post_meta[0]);
+
+			  $loc1 = strpos($codes[1], '"');
+			  $lat =(double) substr($codes[1], $loc1+1);
+			  $loc2 = strpos($codes[3], '"');
+			  $lgt =(double) substr($codes[3], $loc2+1);
+			  $loc3 = strpos($codes[5], '"');
+			  $zoom =(double) substr($codes[5], $loc3+1);
+			  $loc4 = strpos($codes[7], '"');
+			  $info = substr($codes[7], $loc4);
+
+			  $variants[$i] = array($lat, $lgt, $zoom, $info);
+		  }
+		  $drag = __('Marker1', 'leaflet-map');
           echo do_shortcode('[leaflet-map zoom=12 zoomcontrol doubleClickZoom height=600 scrollwheel]');
           echo do_shortcode(sprintf('[leaflet-marker draggable visible] %s [/leaflet-marker]',
             $drag
