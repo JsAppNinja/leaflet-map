@@ -191,6 +191,36 @@
 	margin: auto;
   }
 </style>
+<?php
+  $iconsURLs = array(
+	  "../wp-content/plugins/leaflet-map/markers/small/bred.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/dblue.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/purple.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/orange.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/lblue.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/brown.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/lgray.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/gray.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/green.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/dgreen.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/yellow.png",
+	  "../wp-content/plugins/leaflet-map/markers/small/pyellow.png",
+  );
+  $locations = array(
+	  array("american"),
+	  array("delta"),
+	  array("fedex"),
+	  array("southwest"),
+	  array("united"),
+	  array("ups"),
+	  array("a-10", "b-1", "b-52", "f-15c", "f-15e", "f-16", "f-22", "f-35"),
+	  array("f-35-air-national-guard-fighters-bombers", "b-2", "a-10-air-national-guard-fighters-bombers", "f-15c-air-national-guard-fighters-bombers", "f-16-air-national-guard-fighters-bombers", "f-22-air-national-guard-fighters-bombers"),
+	  array("c-130-air-national-guard", "c-17-air-national-guard", "kc-135-air-national-guard", "kc-46-air-national-guard"),
+	  array("kc-46", "kc-135", "c-130", "c-17", "c-5", "kc-10"),
+	  array("c-32", "c-40-air-national-guard-other", "c-21", "mc-12", "hh-60-air-national-guard-other", "mq-1-air-national-guard-other", "mq-9-air-national-guard-other", "t-38-air-national-guard-other", "rc-26", "e-8", "cv-22"),
+	  array("uv-18", "u-28", "tg-15-16", "t-1", "rq-4", "t-38", "t-41", "t-51-52-53", "t-6", "mq-9", "c-145", "c-40", "e-3", "hh-60", "mq-1")
+  );
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
     if (is_single()) {
@@ -514,6 +544,7 @@
         <?php
 		  $airlines = array();
 		  $branches = array();
+		  $indexes = array();
 		  foreach( $_POST as $key => $categories) {
 			  if ($key == "field_select_airline_tid") {
 				  foreach($categories as $key1 => $term1) {
@@ -526,35 +557,62 @@
 				  }
 			  } 
 		  }
-		  $args1 = array(
-			  'numberposts'	=> -1,
-			  'post_type'	=> 'unit',
-			  'tax_query' => array(
-				array(
-				'taxonomy' => 'airline',
-				'field' => 'slug',
-				'terms' => $airlines)
-			  ),
-			  'orderby' => 'title',
-			  'order' 	=> 'ASC',
-          );
-		  $args2 = array(
-			  'numberposts'	=> -1,
-			  'post_type'	=> 'unit',
-			  'tax_query' => array(
-				array(
-				'taxonomy' => 'branch_category',
-				'field' => 'slug',
-				'terms' => $branches)
-			  ),
-			  'orderby' => 'title',
-			  'order' 	=> 'ASC',
-          );
 		  $markers = array();
-		  $markers1 = get_posts($args1); 
-		  if(!empty($markers1)) $markers = array_merge($markers, $markers1);
-		  $markers2 = get_posts($args2);
-		  if(!empty($markers2)) $markers = array_merge($markers, $markers2);
+		  for ($i=0; $i < count($airlines); $i++) {
+			  $airline = $airlines[$i];
+			  $args1 = array(
+				  'numberposts'	=> -1,
+				  'post_type'	=> 'unit',
+				  'tax_query' => array(
+					array(
+					'taxonomy' => 'airline',
+					'field' => 'slug',
+					'terms' => array($airline))
+				  ),
+				  'orderby' => 'title',
+				  'order' 	=> 'ASC',
+			  );
+			  $markers1 = get_posts($args1);
+		  	  if(!empty($markers1)) {
+				  $markers = array_merge($markers, $markers1);
+				  for ($j=0; $j < count($locations); $j++) {
+					  if (in_array($airline, $locations[$j])) {
+						  foreach($markers1 as $element) {
+							array_push($indexes, $j);
+						  }
+						  break;
+					  }
+				  }
+			  }
+		  }
+		  for ($i=0; $i < count($branches); $i++) {
+			  $branch = $branches[$i];
+			  $args2 = array(
+				  'numberposts'	=> -1,
+				  'post_type'	=> 'unit',
+				  'tax_query' => array(
+					array(
+					'taxonomy' => 'branch_category',
+					'field' => 'slug',
+					'terms' => array($branch))
+				  ),
+				  'orderby' => 'title',
+				  'order' 	=> 'ASC',
+			  );
+			  $markers2 = get_posts($args2);
+		  	  if(!empty($markers2)) {
+				  $markers = array_merge($markers, $markers2);
+				  for ($j=0; $j < count($locations); $j++) {
+					  if (in_array($branch, $locations[$j])) {
+						  foreach($markers2 as $element) {
+							array_push($indexes, $j);
+						  }
+						  break;
+					  }
+				  }
+			  }
+		  }
+
 		  $variants = array();
 		  for ($i = 0; $i < count($markers); $i++) {
 			  $marker = $markers[$i];
@@ -572,11 +630,19 @@
 
 			  $variants[$i] = array($lat, $lgt, $zoom, $info);
 		  }
-		  $drag = __('Marker1', 'leaflet-map');
-          echo do_shortcode('[leaflet-map zoom=12 zoomcontrol doubleClickZoom height=600 scrollwheel]');
-          echo do_shortcode(sprintf('[leaflet-marker draggable visible] %s [/leaflet-marker]',
-            $drag
-          ));
+          echo do_shortcode('[leaflet-map zoom=8 zoomcontrol doubleClickZoom height=600 scrollwheel fitbounds]');
+
+		  $iconurl = "";
+		  for ($i = 0; $i < count($variants); $i++) {
+			  $lat = $variants[$i][0];
+			  $lgt = $variants[$i][1];
+ 			  $info = $variants[$i][3];
+			  $iconIndex = $indexes[$i];
+			  $iconurl = $iconsURLs[$iconIndex];
+			  echo do_shortcode(sprintf('[leaflet-marker lat=%s lng=%s iconurl=%s iconsize="15,20" popupanchor="0,-8"] %s [/leaflet-marker]',
+            	$lat, $lgt, $iconurl, $info
+          	  ));
+		  }
         ?>
       </div>
     </div>
